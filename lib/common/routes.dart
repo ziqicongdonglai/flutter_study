@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_demo/bottom/form_page.dart';
 import 'package:flutter_demo/bottom/index.dart';
+import 'package:flutter_demo/bottom/search_page.dart';
 import 'package:flutter_demo/sample/plant_shop.dart';
 import 'package:flutter_demo/sample/timeline_page.dart';
 import 'package:flutter_demo/widget/multi/aspectratio_widget.dart';
@@ -22,8 +24,11 @@ import 'package:flutter_demo/widget/stateless/listview_widget.dart';
 import 'package:flutter_demo/widget/stateless/text_material_scaffold.dart';
 import 'package:flutter_demo/widget/stateless/text_widget.dart';
 
-Map<String, Widget Function(BuildContext)> routes = {
+// 配置路由，定义Map类型的routes，Key为String类型，Value为Function类型
+final Map<String, Widget Function(BuildContext)> routes = {
   '/index': (context) => const Index(),
+  '/search': (context) => const SearchPage(title: '搜索'),
+  '/form': (context, {arguments}) => FormPage(arguments: arguments),
   // 无状态组件导航
   '/container': (context) => const ContainerWidget(),
   '/text': (context) => const TextWidget(),
@@ -49,4 +54,24 @@ Map<String, Widget Function(BuildContext)> routes = {
   // 示例导航
   '/plant-shop': (context) => const PlantShop(),
   '/timeline': (context) => const TimelinePage(),
+};
+
+// 固定写法
+var onGenerateRoute = (RouteSettings settings) {
+  // 统一处理
+  final String? name = settings.name;
+  final Function? pageContentBuilder = routes[name];
+  if (pageContentBuilder != null) {
+    if (settings.arguments != null) {
+      final Route route = MaterialPageRoute(
+        builder: (context) =>
+            pageContentBuilder(context, arguments: settings.arguments),
+      );
+      return route;
+    } else {
+      final Route route =
+          MaterialPageRoute(builder: (context) => pageContentBuilder(context));
+      return route;
+    }
+  }
 };

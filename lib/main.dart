@@ -18,9 +18,10 @@ class MyApp extends StatelessWidget {
       // 去除debug标签
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      // 注册路由表
-      routes: routes,
       initialRoute: '/',
+      // 注册路由表
+      // routes: routes,
+      onGenerateRoute: onGenerateRoute,
       theme: ThemeData(
         primarySwatch: Colors.indigo,
       ),

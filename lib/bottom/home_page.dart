@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_demo/bottom/search_page.dart';
 import 'package:flutter_demo/widget/custom/hot_widget.dart';
 
 class HomePage extends StatelessWidget {
@@ -16,16 +17,9 @@ class HomePage extends StatelessWidget {
   AppBar _buildAppBar(context) {
     return AppBar(
       elevation: 0,
-      backgroundColor: Colors.white,
-      title: const Text(
-        "首页",
-        style: TextStyle(
-          fontSize: 24,
-          color: Colors.black,
-          fontWeight: FontWeight.bold,
-        ),
-      ),
-      centerTitle: false,
+      // backgroundColor: Colors.white,
+      title: const Text("首页"),
+      centerTitle: true,
     );
   }
 }
@@ -38,113 +32,48 @@ class Body extends StatelessWidget {
   Widget build(BuildContext context) {
     // 返回一个垂直滚动视图
     // SingleChildScrollView 包含单个组件的滚动组件
-    return SingleChildScrollView(
-      padding: const EdgeInsets.all(5.0),
+    return Container(
+      alignment: Alignment.center,
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          Image.asset('images/banner.jpg'),
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          // 1.基本路由跳转传值
+          ElevatedButton(
+            onPressed: () {
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (BuildContext context) {
+                return const SearchPage(
+                  title: 'search',
+                );
+              }));
+            },
+            child: const Text('基本路由跳转传值'),
+          ),
           const SizedBox(
-            height: 10,
+            height: 20,
           ),
-          _buildCardRow(context),
-          const Text(
-            '常用组件',
-            style: TextStyle(
-              fontSize: 20,
-            ),
+          // 2.命名路由跳转
+          ElevatedButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/search');
+            },
+            child: const Text('命名路由跳转'),
           ),
-          _buildScrollView(context),
+          const SizedBox(
+            height: 20,
+          ),
+          // 3.命名路由跳转传值
+          ElevatedButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/form',
+              arguments: {
+                'id': 20,
+                'name': 'zhangsan',
+              });
+            },
+            child: const Text('命名路由跳转传值'),
+          ),
         ],
-      ),
-    );
-  }
-
-  //  构建水平卡片区域
-  Row _buildCardRow(context) {
-    Size size = MediaQuery.of(context).size;
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: const <Widget>[
-        SizedBox(
-          width: 175,
-          height: 150,
-          child: Card(
-            color: Color(0xffe05b48),
-            elevation: 10,
-            child: Center(
-              child: Text(
-                'Dart基础学习',
-                style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-          ),
-        ),
-        SizedBox(
-          width: 175,
-          height: 150,
-          child: Card(
-            color: Color(0xFF5f6cd1),
-            elevation: 10,
-            child: Center(
-              child: Text(
-                'Flutter Widget',
-                style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-          ),
-        ),
-      ],
-    );
-  }
-
-  // 构建水平滚动视图
-  SingleChildScrollView _buildScrollView(context) {
-    // Info数组
-    var list = [
-      Info(
-        width: 200.0,
-        height: 120.0,
-        color: Colors.green,
-        title: 'Container组件',
-        url: '/container',
-      ),
-      Info(
-        width: 200.0,
-        height: 120.0,
-        color: Colors.pink,
-        title: 'Image组件',
-        url: '/image',
-      ),
-      Info(
-        width: 200.0,
-        height: 120.0,
-        color: Colors.orange,
-        title: 'Text组件',
-        url: '/text',
-      )
-    ];
-
-    return SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Row(
-        // children需要列表（数组）
-        children: list
-            .map(
-              // 遍历每一项 把上面的Info类的数组的每个Info
-              // 传给HotWidget组件
-              (e) => HotWidget(info: e),
-            )
-            // 变成数组
-            .toList(),
       ),
     );
   }
