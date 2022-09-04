@@ -87,6 +87,7 @@ final statelessList = <ContainerInfo>[
       '以网格的形式容纳多个组件,可以通过count、extent、custom、builder等构造，有内边距、是否反向、滑动控制等属性。',
       '/gridview'),
   ContainerInfo('各种类型的Button组件', '各种类型的Button组件', '/button'),
+  ContainerInfo('对话框', '各种对话框', '/dialog'),
 ];
 
 // 有状态组件
@@ -96,6 +97,12 @@ final statefulList = <ContainerInfo>[
   ContainerInfo(
       'SliverAppBar', 'SliverAppBar组件可以实现页面头部区域展开、折叠的效果。', '/sliverappbar'),
   ContainerInfo('FloatingActionButton组件', '', '/floating_action_button'),
+  ContainerInfo('Form组件', 'Form组件，简单的登录表单', '/form_login'),
+  ContainerInfo('Form常用组件', 'Checkbox、Radio及Switch', '/check_radio_switch'),
+  ContainerInfo('表单实现学员登记系统', '表单实现学员登记系统', '/form_demo'),
+  ContainerInfo('日期和时间', '日期组件和时间组件', '/date_time'),
+  ContainerInfo('第三方日期选择组件', '第三方日期选择组件', '/date_time_select'),
+  ContainerInfo('Swiper轮播图组件', '第三方轮播图组件', '/swiper'),
 ];
 
 // 多渲染组件

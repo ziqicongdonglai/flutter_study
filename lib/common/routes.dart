@@ -21,11 +21,18 @@ import 'package:flutter_demo/widget/multi/stack_widget1.dart';
 import 'package:flutter_demo/widget/multi/stack_widget2.dart';
 import 'package:flutter_demo/widget/multi/stack_widget3.dart';
 import 'package:flutter_demo/widget/multi/wrap_widget.dart';
+import 'package:flutter_demo/widget/stateful/checkbox_radio_switch_widget.dart';
+import 'package:flutter_demo/widget/stateful/date_picker_pub_widget.dart';
+import 'package:flutter_demo/widget/stateful/date_widget.dart';
 import 'package:flutter_demo/widget/stateful/floating_actionbutton_widget.dart';
+import 'package:flutter_demo/widget/stateful/form_demo_widget.dart';
+import 'package:flutter_demo/widget/stateful/form_widget.dart';
 import 'package:flutter_demo/widget/stateful/image_widget.dart';
 import 'package:flutter_demo/widget/stateful/sliverappbar_widget.dart';
+import 'package:flutter_demo/widget/stateful/swiper_widget.dart';
 import 'package:flutter_demo/widget/stateless/button_widget.dart';
 import 'package:flutter_demo/widget/stateless/container_widget.dart';
+import 'package:flutter_demo/widget/stateless/dialog_widget.dart';
 import 'package:flutter_demo/widget/stateless/gridview_widget.dart';
 import 'package:flutter_demo/widget/stateless/listview_widget.dart';
 import 'package:flutter_demo/widget/stateless/text_material_scaffold.dart';
@@ -42,10 +49,17 @@ final Map<String, Widget Function(BuildContext)> routes = {
   '/text_material_scaffold': (context) => const TextMaterialScaffoldWidget(),
   '/listview': (context) => ListViewWidget(),
   '/gridview': (context) => const GridViewWidget(),
+  '/dialog': (context) => const DialogWidget(),
   // 有状态组件导航
   '/image': (context) => const ImageWidget(),
   '/sliverappbar': (context) => const SliverAppBarWidget(),
   '/floating_action_button': (context) => const FloatingActionButtonWidget(),
+  '/form_login': (context) => const FormWidget(),
+  '/check_radio_switch': (context) => const CheckboxRadioSwitchWidget(),
+  '/form_demo': (context) => const FormDemoWidget(),
+  '/date_time': (context) => const DateWidget(),
+  '/date_time_select': (context) => const DatePickerPubWidget(),
+  '/swiper': (context) => const SwiperWidget(),
   // 布局例子导航
   '/padding': (context) => const PaddingWidget(),
   '/row': (context) => const RowWidget(),
