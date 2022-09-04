@@ -115,5 +115,11 @@ final multiRenderList = <ContainerInfo>[
       '/wrap'),
   ContainerInfo('AspectRation组件', 'AspectRation组件', '/aspect_ration'),
   ContainerInfo('Card组件', 'Card组件', '/card'),
-  ContainerInfo('Card图文列表布局', 'Card图文列表布局', '/card_layout')
+
+  ContainerInfo('AppBar基础使用', 'AppBar基础使用', '/appbar'),
+  ContainerInfo('AppBar自定义顶部Tab切换', 'AppBar自定义顶部Tab切换', '/appbar_tab_bar'),
+  ContainerInfo('AppBar自定义Tab切换，Tab在最顶部', 'AppBar自定义Tab切换，Tab在最顶部', '/appbar_top_tab_bar'),
+  ContainerInfo('用TabController实现Tab切换', 'AppBar用TabController实现Tab切换', '/appbar_tab_controller'),
+  ContainerInfo('UserAccountsDrawerHeader组件', 'UserAccountsDrawerHeader组件', '/useraccounts_drawerheader'),
+  ContainerInfo('各种类型的Button组件', '各种类型的Button组件', '/button'),
 ];

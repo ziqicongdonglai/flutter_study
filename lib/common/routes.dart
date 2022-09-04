@@ -4,6 +4,11 @@ import 'package:flutter_demo/bottom/index.dart';
 import 'package:flutter_demo/bottom/search_page.dart';
 import 'package:flutter_demo/sample/plant_shop.dart';
 import 'package:flutter_demo/sample/timeline_page.dart';
+import 'package:flutter_demo/widget/multi/appbar_custom_tabbar_page.dart';
+import 'package:flutter_demo/widget/multi/appbar_custom_toptabbar_page.dart';
+import 'package:flutter_demo/widget/multi/appbar_page.dart';
+import 'package:flutter_demo/widget/multi/appbar_tabcontroller_page.dart';
+import 'package:flutter_demo/widget/multi/appbar_useraccouts_drawer_page.dart';
 import 'package:flutter_demo/widget/multi/aspectratio_widget.dart';
 import 'package:flutter_demo/widget/multi/card_widget.dart';
 import 'package:flutter_demo/widget/multi/cardlayout_widget.dart';
@@ -51,6 +56,12 @@ final Map<String, Widget Function(BuildContext)> routes = {
   '/aspect_ration': (context) => const AspectRatioWidget(),
   '/card': (context) => const CardWidget(),
   '/card_layout': (context) => const CardLayoutWidget(),
+
+  '/appbar': (context) => const AppBarPage(),
+  '/appbar_tab_bar': (context) => const AppBarCustomTabBarPage(),
+  '/appbar_top_tab_bar': (context) => const AppBarCustomTopTabBarPage(),
+  '/appbar_tab_controller': (context) => const AppBarTabControllerPage(),
+  '/useraccounts_drawerheader': (context) => const AppBarUserAccountsDrawerPage(),
   // 示例导航
   '/plant-shop': (context) => const PlantShop(),
   '/timeline': (context) => const TimelinePage(),

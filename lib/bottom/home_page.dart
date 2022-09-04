@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/bottom/search_page.dart';
-import 'package:flutter_demo/widget/custom/hot_widget.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -30,8 +29,6 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // 返回一个垂直滚动视图
-    // SingleChildScrollView 包含单个组件的滚动组件
     return Container(
       alignment: Alignment.center,
       child: Column(
@@ -65,8 +62,7 @@ class Body extends StatelessWidget {
           // 3.命名路由跳转传值
           ElevatedButton(
             onPressed: () {
-              Navigator.pushNamed(context, '/form',
-              arguments: {
+              Navigator.pushNamed(context, '/form', arguments: {
                 'id': 20,
                 'name': 'zhangsan',
               });
