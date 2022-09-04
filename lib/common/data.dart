@@ -85,7 +85,8 @@ final statelessList = <ContainerInfo>[
   ContainerInfo(
       'GridView',
       '以网格的形式容纳多个组件,可以通过count、extent、custom、builder等构造，有内边距、是否反向、滑动控制等属性。',
-      '/gridview')
+      '/gridview'),
+  ContainerInfo('各种类型的Button组件', '各种类型的Button组件', '/button'),
 ];
 
 // 有状态组件
@@ -94,6 +95,7 @@ final statefulList = <ContainerInfo>[
       'Image', '用于显示一张图片，可以从文件、内存、网络、资源里加载，可以指定适应方式、样式、颜色混合模式、重复模式。', '/image'),
   ContainerInfo(
       'SliverAppBar', 'SliverAppBar组件可以实现页面头部区域展开、折叠的效果。', '/sliverappbar'),
+  ContainerInfo('FloatingActionButton组件', '', '/floating_action_button'),
 ];
 
 // 多渲染组件
@@ -115,11 +117,12 @@ final multiRenderList = <ContainerInfo>[
       '/wrap'),
   ContainerInfo('AspectRation组件', 'AspectRation组件', '/aspect_ration'),
   ContainerInfo('Card组件', 'Card组件', '/card'),
-
   ContainerInfo('AppBar基础使用', 'AppBar基础使用', '/appbar'),
   ContainerInfo('AppBar自定义顶部Tab切换', 'AppBar自定义顶部Tab切换', '/appbar_tab_bar'),
-  ContainerInfo('AppBar自定义Tab切换，Tab在最顶部', 'AppBar自定义Tab切换，Tab在最顶部', '/appbar_top_tab_bar'),
-  ContainerInfo('用TabController实现Tab切换', 'AppBar用TabController实现Tab切换', '/appbar_tab_controller'),
-  ContainerInfo('UserAccountsDrawerHeader组件', 'UserAccountsDrawerHeader组件', '/useraccounts_drawerheader'),
-  ContainerInfo('各种类型的Button组件', '各种类型的Button组件', '/button'),
+  ContainerInfo('AppBar自定义Tab切换，Tab在最顶部', 'AppBar自定义Tab切换，Tab在最顶部',
+      '/appbar_top_tab_bar'),
+  ContainerInfo('用TabController实现Tab切换', 'AppBar用TabController实现Tab切换',
+      '/appbar_tab_controller'),
+  ContainerInfo('UserAccountsDrawerHeader组件', 'UserAccountsDrawerHeader组件',
+      '/useraccounts_drawerheader'),
 ];

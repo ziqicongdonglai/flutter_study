@@ -21,8 +21,10 @@ import 'package:flutter_demo/widget/multi/stack_widget1.dart';
 import 'package:flutter_demo/widget/multi/stack_widget2.dart';
 import 'package:flutter_demo/widget/multi/stack_widget3.dart';
 import 'package:flutter_demo/widget/multi/wrap_widget.dart';
+import 'package:flutter_demo/widget/stateful/floating_actionbutton_widget.dart';
 import 'package:flutter_demo/widget/stateful/image_widget.dart';
 import 'package:flutter_demo/widget/stateful/sliverappbar_widget.dart';
+import 'package:flutter_demo/widget/stateless/button_widget.dart';
 import 'package:flutter_demo/widget/stateless/container_widget.dart';
 import 'package:flutter_demo/widget/stateless/gridview_widget.dart';
 import 'package:flutter_demo/widget/stateless/listview_widget.dart';
@@ -43,6 +45,7 @@ final Map<String, Widget Function(BuildContext)> routes = {
   // 有状态组件导航
   '/image': (context) => const ImageWidget(),
   '/sliverappbar': (context) => const SliverAppBarWidget(),
+  '/floating_action_button': (context) => const FloatingActionButtonWidget(),
   // 布局例子导航
   '/padding': (context) => const PaddingWidget(),
   '/row': (context) => const RowWidget(),
@@ -56,6 +59,7 @@ final Map<String, Widget Function(BuildContext)> routes = {
   '/aspect_ration': (context) => const AspectRatioWidget(),
   '/card': (context) => const CardWidget(),
   '/card_layout': (context) => const CardLayoutWidget(),
+  '/button': (context) => const ButtonWidget(),
 
   '/appbar': (context) => const AppBarPage(),
   '/appbar_tab_bar': (context) => const AppBarCustomTabBarPage(),
