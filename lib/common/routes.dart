@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_demo/bottom/form_page.dart';
 import 'package:flutter_demo/bottom/index.dart';
 import 'package:flutter_demo/bottom/search_page.dart';
+import 'package:flutter_demo/sample/news_content.dart';
+import 'package:flutter_demo/sample/news_page.dart';
 import 'package:flutter_demo/sample/plant_shop.dart';
 import 'package:flutter_demo/sample/timeline_page.dart';
 import 'package:flutter_demo/widget/multi/appbar_custom_tabbar_page.dart';
@@ -27,6 +29,7 @@ import 'package:flutter_demo/widget/stateful/date_widget.dart';
 import 'package:flutter_demo/widget/stateful/floating_actionbutton_widget.dart';
 import 'package:flutter_demo/widget/stateful/form_demo_widget.dart';
 import 'package:flutter_demo/widget/stateful/form_widget.dart';
+import 'package:flutter_demo/widget/stateful/http_demo.dart';
 import 'package:flutter_demo/widget/stateful/image_widget.dart';
 import 'package:flutter_demo/widget/stateful/sliverappbar_widget.dart';
 import 'package:flutter_demo/widget/stateful/swiper_widget.dart';
@@ -74,6 +77,9 @@ final Map<String, Widget Function(BuildContext)> routes = {
   '/card': (context) => const CardWidget(),
   '/card_layout': (context) => const CardLayoutWidget(),
   '/button': (context) => const ButtonWidget(),
+  '/http': (context) => const HttpDemo(),
+  '/news_page': (context) => const NewsPage(),
+  '/news_content': (context, {arguments}) => NewsContent(arguments: arguments,),
 
   '/appbar': (context) => const AppBarPage(),
   '/appbar_tab_bar': (context) => const AppBarCustomTabBarPage(),

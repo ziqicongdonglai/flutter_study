@@ -103,6 +103,8 @@ final statefulList = <ContainerInfo>[
   ContainerInfo('日期和时间', '日期组件和时间组件', '/date_time'),
   ContainerInfo('第三方日期选择组件', '第三方日期选择组件', '/date_time_select'),
   ContainerInfo('Swiper轮播图组件', '第三方轮播图组件', '/swiper'),
+  ContainerInfo('Http数据请求Demo', 'Http数据请求Demo', '/http'),
+  ContainerInfo('Flutter 下拉刷新 上拉分页加载更多', 'Flutter 下拉刷新 上拉分页加载更多', '/news_page'),
 ];
 
 // 多渲染组件
