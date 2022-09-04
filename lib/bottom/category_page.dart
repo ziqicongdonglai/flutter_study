@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_demo/page/multi_render_widget_page.dart';
 import 'package:flutter_demo/page/stateful_widget_page.dart';
 import 'package:flutter_demo/page/stateless_widget_page.dart';
 
@@ -20,7 +21,7 @@ class _CategoryPageState extends State with SingleTickerProviderStateMixin {
     // 有状态
     const StatefulWidgetPage(),
     Container(),
-    Container(),
+    const MultiRenderWidgetPage(),
     Container(),
     Container(),
     Container()
